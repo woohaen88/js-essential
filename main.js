@@ -1,11 +1,17 @@
-// ternary operator
+import random from './getRandom'
 
-const a = 1 < 2 //true
+// 조건문 (if statement)
 
-if (a) {
-  console.log('true')
-}else {
-  console.log('false')
+const a = random()
+
+
+if (a === 0) {
+  console.log('a is 0')
+} else if (a === 2) {
+  console.log('a is 2')
+} else if (a === 4) {
+  console.log('a is 4')
+} else {
+  console.log('rest....')
 }
 
-console.log(a ? 'true' : 'false')
