@@ -1,18 +1,42 @@
-// 산술 연산자(arithemetic operator)
+// 비교 연산자(arithemetic operator)
 
-console.log(1 + 2)
-console.log(5 - 7)
-console.log(3 * 4)
-console.log(10 / 2)
+const a = 1
+const b = 1
 
-//나머지
-console.log(7 % 5)
+console.log(a === b) // 일치 
 
-// 할당
-let a = 2 
-a = a + 1
+const c = 1
+const d = 2
 
-console.log(a)
+console.log(c === d) // 불일치 
 
-a += 2 // a = a + 2 //  * + / - 적용가능
-console.log(a)
+function isEqual(x ,y) {
+  return x === y
+}
+
+console.log(isEqual(1, 1))
+console.log(isEqual(2, '1'))
+
+const tmp1 = 1
+const tmp2 = 3
+const tmp3 = 1
+
+console.log(tmp1 !== tmp2)
+console.log(tmp1 !== tmp3)
+
+console.log(tmp1 < tmp3)
+console.log(tmp1 < tmp2)
+console.log(tmp1 <= tmp2)
+
+// 논리 연산자(logical operator)
+const aa = 1 === 1 // true
+const bb = 'AB' === 'AB' //true
+const cc = false
+
+console.log(aa)
+console.log(bb)
+console.log(cc)
+
+console.log('&&: ', aa && bb && cc)
+console.log('|| ', aa || bb || cc)
+console.log('!aa: ', !aa)
