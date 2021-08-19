@@ -18,6 +18,7 @@ npm install lodash
 
 ## Modified
 `package.json`
+
 ```json
 "scripts": {
     "dev": "parcel index.html",
@@ -25,8 +26,3 @@ npm install lodash
   },
 ```
 
-```json
-"scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-```
