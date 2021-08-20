@@ -1,21 +1,53 @@
-const woohyeon = {
-  firstName: 'woohyeon', // property
-  lastname: 'kim',
-  getFullName: () => `${this.firstName} ${this.lastname}` // method, this -> woohyeon 함수
+// this
+// 일반(Normal) 함수는 위치에 따라 this 정의
+// 화살표(Arrow) 함수는 자신이 선언된 함수 범위에서 this 정의
+
+const heropy = {
+  name: 'heropy',
+  normal: function () {
+    console.log(this.name)
+  },
+  arrow: () => {
+    console.log(this.name)
+  }
 }
-console.log(woohyeon)
+
+heropy.normal()
+heropy.arrow()
 
 const amy = {
-  firstName: 'Amy', // property
-  lastname: 'clarke',
-  getFullName: () => `${this.firstName} ${this.lastname}` // method, this -> woohyeon 함수
+  name: 'Amy',
+  normal: heropy.normal,
+  arrow: heropy.arrow
 }
-console.log(amy)
 
-const neo = {
-  firstName: 'Neo', // property
-  lastname: 'Smith',
-  getFullName: () => `${this.firstName} ${this.lastname}` // method, this -> woohyeon 함수
+amy.normal()
+amy.arrow()
+
+///////////////////////////// constructor
+
+function User(name) {
+  this.name = name
 }
-console.log(neo)
 
+User.prototype.normal = function () {
+  console.log(this.name)
+}
+
+User.prototype.arrow = () => {
+  console.log(this.name)
+}
+
+const heropy2 = new User('Heropy')
+heropy2.normal()
+heropy2.arrow()
+
+const timer = {
+  name: 'Heropy!!!!!',
+  timeout: function () {
+    setTimeout(() => {
+      console.log(this.name)
+    }, 2000)
+  }
+}
+timer.timeout()
