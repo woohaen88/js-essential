@@ -1,28 +1,35 @@
-// ES6 class
-
-const heropy = {
-  name: 'heropy',
-  normal () {
-    console.log(this.name)
-  },
-  arrow: () => {
-    console.log(this.name)
+class Vehicle {
+  constructor(name, wheel) {
+    this.name = name
+    this.wheel = wheel
   }
 }
 
-heropy.normal()
-heropy.arrow()
+const myVehicle = new Vehicle("운송수단", 2)
+console.log(myVehicle)
 
-class User {
-  constructor(first, last) {
-    this.firstName = first
-    this.lastName = last
-  }
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`
+class Bicycle extends Vehicle {
+  constructor(name, wheel) {
+    super(name, wheel)
   }
 }
 
-const woohyeon = new User('woohyeon', 'kim')
+const myBicycle = new Bicycle("삼천리", 2)
+const daughtersBicycle = new Bicycle("세발", 3)
 
-console.log(woohyeon)
+console.log(myBicycle)
+console.log(daughtersBicycle)
+
+
+class Car extends Vehicle {
+  constructor(name, wheel, license) {
+    super(name, wheel)
+    this.license = license
+  }
+}
+
+const myCar = new Car("tesla", 4, true)
+const daughterCar = new Car("포르쉐", 4, false)
+
+console.log(myCar)
+console.log(daughterCar)
