@@ -1,24 +1,21 @@
-function sum(x, y) {
-  return x+y
+// arrow function
+// () => {} vs function () {}
+
+const double = function (x) {
+  return x*2
 }
+console.log('double: ', double(7))
 
-sum(1, 3) // parameter
-sum(4, 12)
-
-const a = sum(1, 3)
-const b = sum(2, 4)
-
-console.log(a)
-console.log(b)
-console.log(a+b)
-
-sum(1, 3)
-
-const sum2 = function(x ,y) {
-  return x + y
+const doubleArrow = (x) => {
+  return x *2
 }
+console.log("doubleArrow,", doubleArrow(7))
 
-function sum3() {
-  console.log(arguments)
-  return
-}
+const doubleArrow2 = (x) => x*2
+console.log("doubleArrow2,", doubleArrow2(8))
+
+const doubleArrow3 = x => x*2
+console.log("doubleArrow3,", doubleArrow3(9))
+
+const doubleArrow4 = x => ({name: 'woohyeon'})
+console.log("doubleArrow4,", doubleArrow4(9))
