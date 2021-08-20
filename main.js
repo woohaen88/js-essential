@@ -1,28 +1,24 @@
-// 변수 유효범위(Variable Scope)
-// var, let, const
+// Type conversion
 
+const { findLastKey } = require("lodash")
 
-// Error
-// function scope() {
-//   if (true){
-//     const a = 123    
-//   }
-//   console.log(a)
-// }
+const a = 1
+const b = '1'
 
-function scope() {
-  if (true){
-    const a = 123    
-    console.log(a)
-  }  
+console.log(a === b)
+
+console.log("a == b: ", a == b)
+
+// Truthy(참 같은 값)
+// true, {}, [], 1, 2 'false', -12, '3.14'
+
+// Falsy(거짓같은값)
+// false, '', null, undefined, 0, -0, NaN
+
+if (1) {
+  console.log(123)
 }
-scope()
 
-
-function scope() {
-  if (true){
-    var a = 123  // 함수레벨      
-  } 
-  console.log(a) 
+if (undefined) {
+  console.log(234)
 }
-scope()
