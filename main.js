@@ -1,16 +1,21 @@
-// Callback
-// 함수의 인수로 사용되는 함수
-
-// setTimeout(함수, 시간)
-
-let timeout = (cb) => {
-  setTimeout(() => {
-    console.log('woohyeon')
-    cb()
-  }, 3000)
+const woohyeon = {
+  firstName: 'woohyeon', // property
+  lastname: 'kim',
+  getFullName: () => `${this.firstName} ${this.lastname}` // method, this -> woohyeon 함수
 }
+console.log(woohyeon)
 
-timeout(() => {
-  console.log('Done!')
-})
-// console.log('Done')
+const amy = {
+  firstName: 'Amy', // property
+  lastname: 'clarke',
+  getFullName: () => `${this.firstName} ${this.lastname}` // method, this -> woohyeon 함수
+}
+console.log(amy)
+
+const neo = {
+  firstName: 'Neo', // property
+  lastname: 'Smith',
+  getFullName: () => `${this.firstName} ${this.lastname}` // method, this -> woohyeon 함수
+}
+console.log(neo)
+
