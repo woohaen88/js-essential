@@ -1,24 +1,24 @@
-// Type conversion
-
-const { findLastKey } = require("lodash")
-
-const a = 1
-const b = '1'
-
-console.log(a === b)
-
-console.log("a == b: ", a == b)
-
-// Truthy(참 같은 값)
-// true, {}, [], 1, 2 'false', -12, '3.14'
-
-// Falsy(거짓같은값)
-// false, '', null, undefined, 0, -0, NaN
-
-if (1) {
-  console.log(123)
+function sum(x, y) {
+  return x+y
 }
 
-if (undefined) {
-  console.log(234)
+sum(1, 3) // parameter
+sum(4, 12)
+
+const a = sum(1, 3)
+const b = sum(2, 4)
+
+console.log(a)
+console.log(b)
+console.log(a+b)
+
+sum(1, 3)
+
+const sum2 = function(x ,y) {
+  return x + y
+}
+
+function sum3() {
+  console.log(arguments)
+  return
 }
