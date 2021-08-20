@@ -1,21 +1,16 @@
-const woohyeon = {
-  firstName: 'woohyeon', // property
-  lastname: 'kim',
-  getFullName: () => `${this.firstName} ${this.lastname}` // method, this -> woohyeon 함수
+function User(first, last) { // 앞에가 대문자
+  this.firstName = first
+  this.lastName = last  
 }
-console.log(woohyeon)
+User.prototype.getFullName = function () {
+  return `${this.firstName} ${this.lastName}`
+}
 
-const amy = {
-  firstName: 'Amy', // property
-  lastname: 'clarke',
-  getFullName: () => `${this.firstName} ${this.lastname}` // method, this -> woohyeon 함수
-}
-console.log(amy)
+const woohyeon = new User('woohyeon', 'park')
+const amy = new User('amy', 'clarke')
+const neo = new User('neo', 'smith')
 
-const neo = {
-  firstName: 'Neo', // property
-  lastname: 'Smith',
-  getFullName: () => `${this.firstName} ${this.lastname}` // method, this -> woohyeon 함수
-}
-console.log(neo)
+console.log(woohyeon.getFullName())
+console.log(amy.getFullName())
+console.log(neo.getFullName())
 
